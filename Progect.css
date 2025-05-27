@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: "Exo 2";
 }
+
 .list {
     display: flex;
     flex-direction: row;
@@ -66,7 +67,7 @@ transition: 1.5s;
     margin-bottom: 20px;
   }
 
-  .menu li:last-child {
+   .menu li:last-child {
     margin-right: 0;
   }
 
@@ -111,7 +112,9 @@ transition: 1.5s;
     color: #d5cdbb;
     font-family: "Inter";
     text-align: justify;
-    margin: 30px;
+    margin: 30px 8px 0 30px;
+    width: 48%;
+
 
 }
 h1 {
@@ -186,3 +189,114 @@ footer {
     font-weight: bold;
 
 }
+
+.order form {
+    width: 100%;
+    margin: 40px auto;
+    max-width: 500px;
+    border-radius: 20px;
+    border: 2px solid #333;
+    background-color: #d5cdbb;
+    padding: 60px 50px;
+    display: flex;               /* flex-контейнер */
+    flex-direction: column;      /* столбцом */
+    gap: 20px;
+}
+.order form .input {
+    width: 100%;
+    border-radius: 8px;
+    padding: 12px;
+    border: none;
+    background-color: #520c1a;
+    border: #3e0d0d;
+    font-size: 18px;
+}
+
+.order form .input::placeholder {
+    color: white
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color:  #3e0d0d;
+    color: white;
+    transition: 0.2s;
+}
+.order form .fld label {
+  font-size: 18px;
+}
+
+.order form .submit-btn:hover {
+    background-color:#6f2232;
+}
+.right {
+    display: flex;
+    gap: 30px;
+    margin: 60px 30px;
+}
+
+.izobr {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;   
+
+}
+.izobr img {
+  width: 60%;    
+  height: auto;    
+  border-radius: 16px; 
+ transition: transform 2s
+}
+
+.flex-cont{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px 30px;
+    gap: 15px;
+}
+.text, .izobr {
+  flex: 1; 
+  min-width: 300px;         
+}
+.izobr img:hover{
+ transform: rotate(20deg) scale(1.2);
+}
+.left img:hover{
+  transform: rotate(-20deg) scale(1.2);
+}
+@media (max-width: 1024px) {
+  .text, .izobr{
+    width: 100%;
+  }
+    .izobr {
+    display: none;
+    }
+    .flex-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;            
+    margin: 20px 0;          
+    padding: 0 16px;       
+    gap: 20px;
+  }
+  .text{
+    text-align: left;
+   width: 100%;
+    margin: 0;
+    padding: 0
+  }
+    .order form {
+    margin: 30px 20px;
+    padding: 50px 40px;
+  }
+  }
